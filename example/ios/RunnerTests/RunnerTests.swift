@@ -3,7 +3,7 @@ import UIKit
 import XCTest
 
 
-@testable import android_nav_setting
+@testable import android_nav_settings
 
 // This demonstrates a simple unit test of the Swift portion of this plugin's implementation.
 //
@@ -12,7 +12,7 @@ import XCTest
 class RunnerTests: XCTestCase {
 
   func testGetPlatformVersion() {
-    let plugin = AndroidNavSettingPlugin()
+    let plugin = AndroidNavSettingsPlugin()
 
     let call = FlutterMethodCall(methodName: "getPlatformVersion", arguments: [])
 

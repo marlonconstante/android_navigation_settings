@@ -1,10 +1,10 @@
 #
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html.
-# Run `pod lib lint android_nav_setting.podspec` to validate before publishing.
+# Run `pod lib lint android_nav_settings.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'android_nav_setting'
-  s.version          = '0.0.1'
+  s.name             = 'android_nav_settings'
+  s.version          = '0.0.3'
   s.summary          = 'It is used to fetch navigation setting selected on Android devices'
   s.description      = <<-DESC
 It is used to fetch navigation setting selected on Android devices
@@ -25,5 +25,5 @@ It is used to fetch navigation setting selected on Android devices
   # required reason APIs, update the PrivacyInfo.xcprivacy file to describe your
   # plugin's privacy impact, and then uncomment this line. For more information,
   # see https://developer.apple.com/documentation/bundleresources/privacy_manifest_files
-  # s.resource_bundles = {'android_nav_setting_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
+  # s.resource_bundles = {'android_nav_settings_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
 end

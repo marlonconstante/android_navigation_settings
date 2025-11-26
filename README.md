@@ -1,6 +1,8 @@
-# android_nav_setting
+# android_nav_settings
 
 A Flutter plugin to detect the system navigation mode on Android devices, supporting identification of three-button navigation, two-button navigation, or gesture navigation. On iOS, it defaults to assuming gesture navigation is enabled.
+
+> This is a fork of [android_nav_setting](https://github.com/sunnykinger/android_nav_setting) created to expand supported Dart and Flutter versions to improve compatibility.
 
 ## Features
 
@@ -15,7 +17,7 @@ To use this plugin in your Flutter project, add it to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  android_nav_setting: ^0.0.2+1
+  android_nav_settings: ^0.0.3
 ```
 
 Then, run `flutter pub get` to install the plugin.
@@ -24,26 +26,26 @@ Then, run `flutter pub get` to install the plugin.
 
 1. Import the plugin:
    ```dart
-   import 'package:android_nav_setting/android_nav_setting.dart';
+   import 'package:android_nav_settings/android_nav_settings.dart';
    ```
 
-2. Create an instance of `AndroidNavSetting`:
+2. Create an instance of `AndroidNavSettings`:
    ```dart
-   final navSetting = AndroidNavSetting();
+   final navSettings = AndroidNavSettings();
    ```
 
 3. Check navigation mode or specific navigation types:
    ```dart
    // Get raw navigation mode (0: three-button, 1: two-button, 2: gesture)
-   int mode = await navSetting.getNavigationMode();
+   int mode = await navSettings.getNavigationMode();
    print('Navigation Mode: $mode');
 
    // Check if three-button navigation is enabled
-   bool isThreeButton = await navSetting.isThreeButtonNavigationEnabled();
+   bool isThreeButton = await navSettings.isThreeButtonNavigationEnabled();
    print('Three-Button Navigation: $isThreeButton');
 
    // Check if gesture navigation is enabled
-   bool isGesture = await navSetting.isGestureNavigationEnabled();
+   bool isGesture = await navSettings.isGestureNavigationEnabled();
    print('Gesture Navigation: $isGesture');
    ```
 
@@ -58,7 +60,7 @@ The `example` directory contains a sample Flutter app demonstrating how to use t
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:android_nav_setting/android_nav_setting.dart';
+import 'package:android_nav_settings/android_nav_settings.dart';
 
 void main() {
   runApp(const MyApp());
@@ -73,7 +75,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String _navigationStatus = 'Unknown';
-  final _androidNavSettingPlugin = AndroidNavSetting();
+  final _androidNavSettingsPlugin = AndroidNavSettings();
 
   @override
   void initState() {
@@ -84,7 +86,7 @@ class _MyAppState extends State<MyApp> {
   Future<void> initPlatformState() async {
     bool? isGestureEnabled;
     try {
-      isGestureEnabled = await _androidNavSettingPlugin.isGestureNavigationEnabled();
+      isGestureEnabled = await _androidNavSettingsPlugin.isGestureNavigationEnabled();
       _navigationStatus = isGestureEnabled ? 'Enabled' : 'Disabled';
     } catch (e) {
       _navigationStatus = 'Failed to get navigation status.';

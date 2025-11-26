@@ -1,12 +1,12 @@
 import 'dart:io';
 
-import 'android_nav_setting_platform_interface.dart';
+import 'android_nav_settings_platform_interface.dart';
 
-class AndroidNavSetting {
+class AndroidNavSettings {
   Future<int> getNavigationMode() async {
     if (Platform.isAndroid) {
       try {
-        return await AndroidNavSettingPlatform.instance.getNavigationMode() ??
+        return await AndroidNavSettingsPlatform.instance.getNavigationMode() ??
             0;
       } catch (e) {
         return 0; // Fallback for errors on Android

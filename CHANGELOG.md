@@ -1,12 +1,18 @@
+## [0.0.3]
+### Compatibility
+- Expanded supported Dart and Flutter versions to improve compatibility.
+
+---
+
 ## [0.0.2+2]
 ### Fixed
-- Fixed imports issue
+- Fixed imports issue.
 
 ---
 
 ## [0.0.2+1]
 ### Fixed
-- Updated README file
+- Updated README file.
 
 ---
 

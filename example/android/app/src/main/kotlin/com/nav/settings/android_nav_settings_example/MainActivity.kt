@@ -1,4 +1,4 @@
-package com.nav.setting.android_nav_setting_example
+package com.nav.settings.android_nav_settings_example
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,4 +1,4 @@
-package com.nav.setting.android_nav_setting
+package com.nav.settings.android_nav_settings
 
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
@@ -13,10 +13,10 @@ import org.mockito.Mockito
  * you can run them directly from IDEs that support JUnit such as Android Studio.
  */
 
-internal class AndroidNavSettingPluginTest {
+internal class AndroidNavSettingsPluginTest {
   @Test
   fun onMethodCall_getPlatformVersion_returnsExpectedValue() {
-    val plugin = AndroidNavSettingPlugin()
+    val plugin = AndroidNavSettingsPlugin()
 
     val call = MethodCall("getPlatformVersion", null)
     val mockResult: MethodChannel.Result = Mockito.mock(MethodChannel.Result::class.java)

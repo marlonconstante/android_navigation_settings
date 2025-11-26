@@ -1,10 +1,10 @@
 import Flutter
 import UIKit
 
-public class AndroidNavSettingPlugin: NSObject, FlutterPlugin {
+public class AndroidNavSettingsPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "android_nav_setting", binaryMessenger: registrar.messenger())
-    let instance = AndroidNavSettingPlugin()
+    let channel = FlutterMethodChannel(name: "android_nav_settings", binaryMessenger: registrar.messenger())
+    let instance = AndroidNavSettingsPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 
