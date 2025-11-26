@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:android_nav_settings_example/main.dart';
+import 'package:android_navigation_settings_example/main.dart';
 
 void main() {
   testWidgets('Verify navigation status is displayed', (WidgetTester tester) async {

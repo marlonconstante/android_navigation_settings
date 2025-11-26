@@ -1,12 +1,12 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:android_nav_settings/android_nav_settings_method_channel.dart';
+import 'package:android_navigation_settings/android_navigation_settings_method_channel.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  MethodChannelAndroidNavSettings platform = MethodChannelAndroidNavSettings();
-  const MethodChannel channel = MethodChannel('android_nav_settings');
+  MethodChannelAndroidNavigationSettings platform = MethodChannelAndroidNavigationSettings();
+  const MethodChannel channel = MethodChannel('android_navigation_settings');
 
   setUp(() {
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(

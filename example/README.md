@@ -1,6 +1,6 @@
-# android_nav_settings_example
+# android_navigation_settings_example
 
-Demonstrates how to use the android_nav_settings plugin.
+Demonstrates how to use the android_navigation_settings plugin.
 
 ## Getting Started
 

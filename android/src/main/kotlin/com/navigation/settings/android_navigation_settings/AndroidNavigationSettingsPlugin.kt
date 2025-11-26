@@ -1,4 +1,4 @@
-package com.nav.settings.android_nav_settings
+package com.navigation.settings.android_navigation_settings
 
 import android.content.Context
 import android.os.Build
@@ -11,8 +11,8 @@ import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 
-/** AndroidNavSettingsPlugin */
-class AndroidNavSettingsPlugin : FlutterPlugin, MethodCallHandler {
+/** AndroidNavigationSettingsPlugin */
+class AndroidNavigationSettingsPlugin : FlutterPlugin, MethodCallHandler {
     /// The MethodChannel that will the communication between Flutter and native Android
     ///
     /// This local reference serves to register the plugin with the Flutter Engine and unregister it
@@ -22,7 +22,7 @@ class AndroidNavSettingsPlugin : FlutterPlugin, MethodCallHandler {
 
 
     override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "android_nav_settings")
+        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "android_navigation_settings")
         channel.setMethodCallHandler(this)
         context = flutterPluginBinding.applicationContext
     }
@@ -56,7 +56,7 @@ class AndroidNavSettingsPlugin : FlutterPlugin, MethodCallHandler {
                 0
             }
         } catch (e: Settings.SettingNotFoundException) {
-            Log.e("AndroidNavSettingsPlugin", "Error reading navigation mode", e)
+            Log.e("AndroidNavigationSettingsPlugin", "Error reading navigation mode", e)
             0 // Fallback
         }
     }

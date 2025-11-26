@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:android_nav_settings/android_nav_settings.dart';
+import 'package:android_navigation_settings/android_navigation_settings.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String _navigationStatus = 'Unknown';
-  final _androidNavSettingsPlugin = AndroidNavSettings();
+  final _androidNavigationSettingsPlugin = AndroidNavigationSettings();
 
   @override
   void initState() {
@@ -30,7 +30,7 @@ class _MyAppState extends State<MyApp> {
     bool? isGestureEnabled;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      isGestureEnabled = await _androidNavSettingsPlugin.isGestureNavigationEnabled();
+      isGestureEnabled = await _androidNavigationSettingsPlugin.isGestureNavigationEnabled();
       _navigationStatus = isGestureEnabled ? 'Enabled' : 'Disabled';
     } on PlatformException {
       _navigationStatus = 'Failed to get navigation status.';

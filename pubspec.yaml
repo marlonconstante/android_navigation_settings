@@ -1,7 +1,7 @@
-name: android_nav_settings
+name: android_navigation_settings
 description: "It is used to fetch navigation setting selected on Android devices"
 version: 0.0.3
-repository: https://github.com/marlonconstante/android_nav_settings
+repository: https://github.com/marlonconstante/android_navigation_settings
 homepage:
 
 environment:
@@ -36,10 +36,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.nav.settings.android_nav_settings
-        pluginClass: AndroidNavSettingsPlugin
+        package: com.navigation.settings.android_navigation_settings
+        pluginClass: AndroidNavigationSettingsPlugin
       ios:
-        pluginClass: AndroidNavSettingsPlugin
+        pluginClass: AndroidNavigationSettingsPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

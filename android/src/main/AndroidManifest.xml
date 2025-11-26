@@ -1,3 +1,3 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.nav.settings.android_nav_settings">
+  package="com.navigation.settings.android_navigation_settings">
 </manifest>
